@@ -29,7 +29,7 @@ export const loginUser = ({ email, password }) => {
     axios.post('http://gymapp-br.herokuapp.com/api/users/sign_in', { email: email, password: password})
       .then(user => {console.log(user); loginUserSuccess(dispatch, user.data)})
       .catch(() => {
-        loginUserFail();
+        loginUserFail(dispatch);
       });
   };
 };
