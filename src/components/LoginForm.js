@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
 import { connect } from 'react-redux';
+import { Card, Divider } from 'react-native-material-design';
 import { emailChanged, passwordChanged, loginUser } from '../actions';
-import { Card, CardSection, Input, Button, Spinner } from './common';
+import { Input, Button, Spinner } from './common';
 
 class LoginForm extends Component {
   onEmailChange(text) {
@@ -33,17 +34,15 @@ class LoginForm extends Component {
 
   render() {
     return (
+      <View>
       <Card>
-        <CardSection>
           <Input
             label="Email"
             placeholder="email@gmail.com"
             onChangeText={this.onEmailChange.bind(this)}
             value={this.props.email}
           />
-        </CardSection>
-
-        <CardSection>
+          <Divider />
           <Input
             secureTextEntry
             label="Password"
@@ -51,16 +50,14 @@ class LoginForm extends Component {
             onChangeText={this.onPasswordChange.bind(this)}
             value={this.props.password}
           />
-        </CardSection>
+        </Card>
 
         <Text style={styles.errorTextStyle}>
           {this.props.error}
         </Text>
 
-        <CardSection>
-          {this.renderButton()}
-        </CardSection>
-      </Card>
+        {this.renderButton()}
+      </View>
     );
   }
 }

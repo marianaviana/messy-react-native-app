@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { Actions } from 'react-native-router-flux';
 import {
   GYMCARDS_FETCH_SUCCESS,
 } from './types';
@@ -7,9 +6,9 @@ import {
 
 export const GymCardsFetch = () => {
   return (dispatch, getState) => {
-    axios.get('http://gymapp-br.herokuapp.com/api/gymcards.json',
-      { user_email: getState().auth.user.email, user_token: getState().auth.user.auth_token })
-      .then(response => {dispatch({
+    axios.get(`http://gymapp-br.herokuapp.com/api/gymcards.json?user_email=${getState().auth.user.email}&user_token=${getState().auth.user.auth_token}`)
+      .then(response => {
+          dispatch({
           type: GYMCARDS_FETCH_SUCCESS,
           payload: response.data.gymcards
         });
