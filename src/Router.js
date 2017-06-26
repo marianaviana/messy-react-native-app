@@ -6,6 +6,7 @@ import GymCard from './components/GymCard';
 import GymCardShow from './components/GymCardShow';
 import Assessment from './components/Assessment';
 import AssessmentShow from './components/AssessmentShow';
+import Profile from './components/Profile';
 
 const RouterComponent = () => {
   return (
@@ -34,6 +35,8 @@ const RouterComponent = () => {
           title="Avaliação"
         />
         <Scene key="assessmentShow" component={AssessmentShow} title="Detalhes da Avaliação" />
+
+        <Scene key="profile" component={Profile} title="Dados Pessoais" />
       </Scene>
     </Router>
   );

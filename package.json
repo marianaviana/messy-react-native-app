@@ -12,6 +12,7 @@
     "moment": "^2.18.1",
     "react": "15.3.2",
     "react-native": "0.34.1",
+    "react-native-highcharts": "^1.0.1",
     "react-native-material-cards": "^1.0.4",
     "react-native-material-design": "^0.3.7",
     "react-native-router-flux": "3.38.0",

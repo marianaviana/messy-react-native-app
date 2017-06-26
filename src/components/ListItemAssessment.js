@@ -10,15 +10,25 @@ class ListItemAssessment extends Component {
     Actions.assessmentShow({ assessment: this.props.assessment });
   }
 
+  renderName() {
+    const { type, created_at } = this.props.assessment;
+
+    if (type === 'IcqAssessment') {
+      return (<Text>ICQ - {Moment(created_at).format('DD-MM-YYYY')}</Text>);
+    }
+
+    return (<Text>{type} - {Moment(created_at).format('DD-MM-YYYY')}</Text>);
+  }
+
   render() {
-    const { id, type, created_at } = this.props.assessment;
+    const { id } = this.props.assessment;
     return (
       <TouchableWithoutFeedback onPress={this.onRowPress.bind(this)}>
         <View>
           <Card key={id}>
             <Card.Body>
               <Text>
-                {type} - {Moment(created_at).format('DD-MM-YYYY')}
+                {this.renderName()}
               </Text>
             </Card.Body>
           </Card>

@@ -5,13 +5,22 @@ import {
   PASSWORD_CHANGED,
   LOGIN_USER_SUCCESS,
   LOGIN_USER_FAIL,
-  LOGIN_USER
+  LOGIN_USER,
+  LOGOUT
 } from './types';
 
 export const emailChanged = (text) => {
   return {
     type: EMAIL_CHANGED,
     payload: text
+  };
+};
+
+export const Logout = () => {
+  return (dispatch) => {
+    dispatch({ type: LOGOUT });
+
+    Actions.auth();
   };
 };
 

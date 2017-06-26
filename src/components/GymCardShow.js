@@ -27,6 +27,12 @@ class GymCardShow extends Component {
                 Nome: {workout.name}
               </Text>
               <Text>
+                Grupo Muscular: {workout.grouptype.name}
+              </Text>
+              <Text>
+                Exercício: {workout.exercise.name}
+              </Text>
+              <Text>
                 Equipamento: {workout.equipment.name}
               </Text>
               <Text>
