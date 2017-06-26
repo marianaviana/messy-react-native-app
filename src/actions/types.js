@@ -7,3 +7,5 @@ export const LOGIN_USER = 'login_user';
 export const GYMCARDS_FETCH_SUCCESS = 'gymcards_fetch_success';
 export const ASSESSMENTS_FETCH_SUCCESS = 'assessments_fetch_success';
 export const PROFILE_FETCH_SUCCESS = 'profile_fetch_success';
+
+export const URL = 'http://10.0.2.2:3000';

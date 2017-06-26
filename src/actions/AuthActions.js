@@ -6,7 +6,8 @@ import {
   LOGIN_USER_SUCCESS,
   LOGIN_USER_FAIL,
   LOGIN_USER,
-  LOGOUT
+  LOGOUT,
+  URL
 } from './types';
 
 export const emailChanged = (text) => {
@@ -35,7 +36,7 @@ export const loginUser = ({ email, password }) => {
   return (dispatch) => {
     dispatch({ type: LOGIN_USER });
 
-    axios.post('http://gymapp-br.herokuapp.com/api/users/sign_in', { email, password })
+    axios.post(`${URL}/api/users/sign_in`, { email, password })
       .then(user => { loginUserSuccess(dispatch, user.data) })
       .catch(() => {
         loginUserFail(dispatch);
