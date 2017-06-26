@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Card } from 'react-native-material-design';
 import { Actions } from 'react-native-router-flux';
 import { connect } from 'react-redux';
-import { Logout } from '../actions';
+import { Logout, Checkin } from '../actions';
 
 class Dashboard extends Component {
 
@@ -23,9 +23,28 @@ class Dashboard extends Component {
     this.props.Logout();
   }
 
+  checkin() {
+    this.props.Checkin();
+  }
+
+  checkinMessage() {
+    if (this.props.checkin.created) {
+      return (
+        <TouchableWithoutFeedback onPress={this.openGymcard.bind(this)}>
+          <Card>
+            <Card.Body>
+              <Text>{this.props.checkin.message}</Text>
+              </Card.Body>
+          </Card>
+        </TouchableWithoutFeedback>
+      );
+    }
+  }
+
   render() {
     return (
       <View>
+      {this.checkinMessage()}
       <TouchableWithoutFeedback onPress={this.openGymcard.bind(this)}>
         <View>
           <Card>
@@ -53,6 +72,15 @@ class Dashboard extends Component {
               </Card>
         </View>
       </TouchableWithoutFeedback>
+      <TouchableWithoutFeedback onPress={this.checkin.bind(this)}>
+        <View>
+          <Card>
+            <Card.Body>
+              <Text>Checkin</Text>
+              </Card.Body>
+          </Card>
+        </View>
+      </TouchableWithoutFeedback>
       <TouchableWithoutFeedback onPress={this.logout.bind(this)}>
         <View>
           <Card>
@@ -67,4 +95,10 @@ class Dashboard extends Component {
   }
 }
 
-export default connect(null, { Logout })(Dashboard);
+const mapStateToProps = state => {
+  const checkin = state.checkin;
+
+  return { checkin };
+};
+
+export default connect(mapStateToProps, { Logout, Checkin })(Dashboard);

@@ -15,6 +15,7 @@
     "react-native-highcharts": "^1.0.1",
     "react-native-material-cards": "^1.0.4",
     "react-native-material-design": "^0.3.7",
+    "react-native-message-bar": "^1.6.0",
     "react-native-router-flux": "3.38.0",
     "react-redux": "^4.4.5",
     "redux": "^3.6.0",
