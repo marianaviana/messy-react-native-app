@@ -9,10 +9,9 @@ The  management in small gyms occurs in manual way. This requires a reasonable c
 [Click here to view the web version](https://github.com/marianaviana/Gymapp)
 
 ### Developers
-- [Mariana Viana](http://github.com/marianaviana)
-- [Luiza Melo](http://github.com/meloluiza)
+![Mariana Viana](https://avatars3.githubusercontent.com/u/5909738?s=117&v=4)| ![Mariana Viana](https://avatars0.githubusercontent.com/u/26289799?s=117&v=4)
+:------------: | :------------:
+[Mariana Viana](http://github.com/marianaviana) | [Luiza Melo](http://github.com/meloluiza)
 
 ### Thanks
-- [Thiago Cifani](http://github.com/thiagocifani)
-- [Roberto Rosenhaim](http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4658390P4)
-- [Rodrigo Vale](http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4779035E5)
+[Roberto Rosenhaim](http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4658390P4) / [Rodrigo Vale](http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4779035E5) / [Thiago Cifani](http://github.com/thiagocifani)
